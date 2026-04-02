@@ -476,102 +476,81 @@ ul {
     padding: var(--section-padding);
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);
+    position: relative;
+    overflow: hidden;
 }
 
 .learning-content {
-    max-width: 800px;
+    max-width: 850px; /* Levemente aumentado para um enquadramento melhor */
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Nova Logo na Seção */
+.learning-logo {
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin-bottom: 25px; /* Alinhada com o texto abaixo */
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
 }
 
 .learning-section .divider {
     background-color: var(--color-accent-terracota);
+    width: 80px; /* Divider um pouco mais imponente */
 }
 
 .learning-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.85rem; /* Ajuste para elegância */
+    line-height: 1.15;
     color: var(--color-text-light);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
 }
 
 .learning-list {
-    margin: 40px 0;
+    margin: 50px 0;
     list-style: none;
     padding: 0;
     perspective: 1000px;
 }
 
 .learning-list li {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* Aumentado para preencher o enquadramento */
     color: var(--color-text-light);
-    margin-bottom: 25px;
+    margin-bottom: 30px; /* Mais respiro entre itens */
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    font-weight: 700; /* NEGRITO INTENSO para nitidez total */
-    line-height: 1.4;
-    text-rendering: auto; /* Evita processamento extra que pode embaçar */
-    -webkit-font-smoothing: subpixel-antialiased; /* Melhor para Windows */
-    
-    /* Estado Inicial 3D */
-    opacity: 0;
-    transform: translateX(-30px);
-}
-
-/* Disparo da cascata na lista */
-.learning-list.visible li {
-    animation: listSlide3D 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-.learning-list li:nth-child(1) { animation-delay: 0.1s; }
-.learning-list li:nth-child(2) { animation-delay: 0.25s; }
-.learning-list li:nth-child(3) { animation-delay: 0.4s; }
-.learning-list li:nth-child(4) { animation-delay: 0.55s; }
-.learning-list li:nth-child(5) { animation-delay: 0.7s; }
-
-@keyframes listSlide3D {
-    0% {
-        opacity: 0;
-        transform: translateX(-30px) rotateY(-15deg);
-    }
-    100% {
-        opacity: 1;
-        transform: none; /* CORREÇÃO FINAL: transform: none garante que os pixels fiquem 100% nítidos */
-    }
+    gap: 20px;
+    font-weight: 500; /* Mudado de 700 para 500 para elegância moderna, mas nítida */
+    line-height: 1.45;
+    text-rendering: optimizeLegibility;
 }
 
 .learning-list i {
     color: var(--color-accent-terracota);
-    font-size: 1.6rem;
-    margin-top: 2px;
+    font-size: 1.8rem;
+    margin-top: 1px;
 }
 
 .learning-list strong {
-    color: #e69d72; /* Tom de terracota MAIS CLARO para contraste no fundo escuro */
-    font-weight: 800; /* Extra bold para as partes destacadas */
-    display: inline;
+    color: #f1b38e; /* Tom de terracota nítido e elegante */
+    font-weight: 700;
 }
 
-/* ::after removido — não funciona com display:inline */
-
-
 .learning-disclaimer {
-    background-color: #FFFFFF; /* ALTO CONTRASTE: FUNDO BRANCO */
-    padding: 40px 50px;
-    border-radius: 16px;
-    
-    /* Novo Efeito 3D Profundo */
-    border-bottom: 8px solid rgba(153, 103, 71, 0.2); /* Sombra de espessura */
-    position: relative;
+    background-color: #FFFFFF;
+    padding: 45px 55px; /* Aumentado o enquadramento interno */
+    border-radius: 20px;
+    border-left: 10px solid var(--color-accent-terracota);
     box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.1),
-        0 20px 60px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    
-    margin-top: 60px;
-    overflow: hidden;
-    
-    /* Configuração 3D Avançada */
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
     opacity: 0;
-    transform: perspective(1000px) translateZ(-50px) translateY(40px) rotateX(10deg);
+    transform: translateY(40px);
     transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 1s ease;
 }
 
