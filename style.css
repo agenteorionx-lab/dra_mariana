@@ -810,31 +810,35 @@ ul {
     color: var(--color-text-light);
 }
 
+.expert-identity-block {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 5;
+}
+
 .expert-section .section-subtitle {
     color: var(--color-accent-terracota);
-}
-
-.expert-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.expert-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: -20px 20px 0 var(--color-accent-terracota);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
 }
 
 .expert-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.1;
+    font-family: var(--font-heading);
 }
 
 .expert-content .divider {
     background-color: var(--color-accent-terracota);
+    width: 60px;
+    height: 3px;
+    margin: 20px 0;
 }
 
 .expert-bio p {
@@ -865,26 +869,36 @@ ul {
    Footer (FUNDO BRANCO - Elaborado)
    ==================================================== */
 .site-footer {
-    padding: 60px 20px;
+    padding: 24px 20px; /* Rodapé mais fino conforme solicitado */
     background-color: var(--color-bg-light);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
-.footer-simple p {
+.footer-content {
+    max-width: 1000px;
+}
+
+.footer-top p {
     color: var(--color-text-body);
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    opacity: 0.7;
 }
 
 .footer-links {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centralizado, um ao lado do outro */
     align-items: center;
-    gap: 15px;
-    font-size: 0.85rem;
-    margin-top: 10px;
+    gap: 15px; /* Espaço entre os links */
+    margin: 0 auto;
+    font-size: 0.75rem;
+}
+
+.footer-dot {
+    color: var(--color-accent-terracota);
+    opacity: 0.5;
+    font-size: 0.8rem;
 }
 
 .footer-links a {
@@ -1116,18 +1130,20 @@ ul {
     /* Event Details */
     .event-details {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 15px;
         margin-top: 18px;
+        justify-content: center; /* Centraliza no mobile */
+        width: 100%;
     }
 
     /* Assinatura — reset total */
     .signature-container {
         margin-left: 0 !important;
-        margin-top: 14px !important;
+        margin-top: 20px !important;
         padding-top: 0;
-        text-align: left;
+        text-align: center; /* Centraliza no mobile */
     }
-    .signature-img { max-width: 216px; } /* +20% sobre os 180px anteriores */
+    .signature-img { max-width: 240px; } /* Aumentado levemente para destacar no centro */
 
 
     /* ── Problemas Grid — 1 coluna ── */
@@ -1185,17 +1201,92 @@ ul {
     }
     .info-item { font-size: 0.9rem; }
 
-    /* ── Expert Section ── */
-    .expert-section { padding: 50px 16px; }
-    .expert-content h2 { font-size: 1.75rem; }
-    .expert-bio p { font-size: 0.95rem; }
-    .expert-highlight { font-size: 1.05rem; padding-left: 14px; }
-    .expert-signature-img { max-width: 200px; }
-    .expert-image img { box-shadow: -8px 8px 0 var(--color-accent-terracota); }
+    /* ── Expert Section Sophisticated ── */
+    .expert-section { padding: 50px 16px 30px; text-align: left; }
+    
+    .expert-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    .expert-image {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0 !important;
+        display: flex; /* Adicionado para centralização */
+        justify-content: center;
+    }
+
+    .expert-image img {
+        border-radius: 12px;
+        box-shadow: none !important;
+        width: 100%;
+        max-width: 364px; /* Aumentado em 30% conforme solicitado (280px -> 364px) */
+        height: auto;
+        aspect-ratio: auto;
+        display: block;
+    }
+
+    /* O Pulo do Gato: Sobreposição do Nome sobre a Foto no Mobile */
+    .expert-identity-block {
+        background: linear-gradient(to top, rgba(26, 30, 38, 0.95), rgba(26, 30, 38, 0.7), transparent);
+        padding: 40px 15px 20px;
+        margin-top: -100px;
+        margin-bottom: 25px;
+        border-radius: 0 0 12px 12px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        width: 100%;
+        max-width: 364px; /* Acompanha o novo tamanho da imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .expert-content .section-subtitle {
+        font-size: 0.8rem;
+        text-align: center;
+        margin-bottom: 4px !important;
+    }
+
+    .expert-content h2 {
+        font-size: 2rem !important;
+        text-align: center;
+        margin-top: 0 !important;
+    }
+
+    .expert-bio {
+        padding: 0 4px;
+    }
+
+    .expert-bio p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: var(--color-text-light);
+        opacity: 0.9;
+    }
+
+    .expert-highlight {
+        font-size: 1.15rem;
+        margin: 30px 0;
+        padding: 0;
+        border: none;
+        text-align: center;
+        color: var(--color-accent-terracota);
+        font-weight: 600;
+    }
+
+    .expert-signature-img {
+        max-width: 220px;
+        margin: 20px auto 0;
+        display: block;
+    }
 
     /* ── Footer ── */
-    .site-footer { padding: 40px 16px; }
-    .footer-links { flex-direction: column; gap: 8px; }
+    .site-footer { padding: 20px 16px; }
+    .footer-links { flex-direction: row; justify-content: center; gap: 12px; }
     .footer-divider { display: none; }
 }
 

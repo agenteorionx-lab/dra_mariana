@@ -34,7 +34,7 @@
                 <p class="hero-disclaimer">Aulão direto ao ponto, com base em casos reais e decisões recentes.</p>
                 
                 <div class="hero-cta">
-                    <a href="https://checkout.doppus.app/18340134" class="btn-primary">Garantir minha vaga</a>
+                    <a href="#oferta" class="btn-primary">Garantir minha vaga</a>
                 </div>
 
                 <div class="event-details">
@@ -140,7 +140,7 @@
     </section>
 
     <!-- Dobra 4: Oferta -->
-    <section class="offer-section">
+    <section class="offer-section" id="oferta">
         <div class="container container-sm">
             <div class="offer-card fade-in-up">
                 <!-- Header com Logo e Especialista -->
@@ -192,8 +192,10 @@
                     <img src="imagens/FOTO-MARIANA.jpg" alt="Dra. Mariana Arteiro" width="500" height="600" loading="lazy">
                 </div>
                 <div class="expert-content fade-in-up" style="animation-delay: 0.2s;">
-                    <span class="section-subtitle">A Expert</span>
-                    <h2>Mariana Arteiro</h2>
+                    <div class="expert-identity-block">
+                        <span class="section-subtitle">A Expert</span>
+                        <h2>Dra. Mariana Arteiro</h2>
+                    </div>
                     <div class="divider left"></div>
                     <div class="expert-bio">
                         <p>Mariana Arteiro é referência no Brasil em Planejamento Patrimonial, Sucessório e Direito Empresarial. Atualmente, preside a Comissão Especial de Planejamento Sucessório e Holdings da OAB/SP (2025/2027), é Conselheira da OAB/SP (2022/2027), consolidando sua posição estratégica no cenário jurídico.</p>
@@ -209,12 +211,16 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-simple">
-            <p>&copy; <span id="current-year"></span> Dra. Mariana Arteiro. Todos os direitos reservados.</p>
-            <div class="footer-links">
-                <a href="https://praticapps.com.br/mariana-arteiro-termos-de-uso-2/" target="_blank" rel="noopener noreferrer">Termos de Uso</a>
-                <span class="footer-divider">|</span>
-                <a href="https://praticapps.com.br/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <p>&copy; <span id="current-year"></span> Dra. Mariana Arteiro. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="https://praticapps.com.br/mariana-arteiro-termos-de-uso-2/" target="_blank" rel="noopener noreferrer">Termos de Uso</a>
+                    <span class="footer-dot">•</span>
+                    <a href="https://praticapps.com.br/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>
+                </div>
             </div>
         </div>
     </footer>
